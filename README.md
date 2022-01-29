@@ -1,5 +1,4 @@
 # myretro-ui
-An interactive tool for retrospectives
 
 
 My Retro is an interactive tool for retrospectives. 
@@ -15,5 +14,8 @@ Features:
 8. Surveys (still in development)
 
 Demo:
-https://github.com/azatugurlu/myretro-ui/blob/9abcb4a16d20742110a94c011538a774e9044133/635lyq.gif
+![Demo](https://github.com/azatugurlu/myretro-ui/blob/9abcb4a16d20742110a94c011538a774e9044133/635lyq.gif)
+
+
+Please see backend project here: https://github.com/azatugurlu/myretro-rest
 
