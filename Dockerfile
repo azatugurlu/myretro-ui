@@ -9,14 +9,16 @@ WORKDIR /myretro-ui
 # copy both 'package.json' and 'package-lock.json' (if available)
 COPY package*.json ./
 
+RUN npm install -g npm@7.24.0
+RUN apk add --update python3 make g++ && rm -rf /var/cache/apk/*
+
 # install project dependencies
 RUN npm install
 
 # copy project files and folders to the current working directory (i.e. 'app' folder)
 COPY . .
 
-# build app for production with minification
-RUN npm run build
+RUN npm run dev
 
-EXPOSE 8080
+EXPOSE 9528
 CMD [ "http-server", "dist" ]
