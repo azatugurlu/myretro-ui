@@ -17,6 +17,11 @@ Features:
 ![Demo](https://github.com/azatugurlu/myretro-ui/blob/9abcb4a16d20742110a94c011538a774e9044133/635lyq.gif)
 
 
+Installation:
+1. npm install
+2. npm run dev
+3. Make sure backend is running also
+
 
 Please see backend project here: https://github.com/azatugurlu/myretro-rest
 
