@@ -23,5 +23,11 @@ Installation:
 3. Make sure backend is running also
 
 
+Or you can use docker compose:
+docker compose file: https://github.com/azatugurlu/myretro/blob/main/docker-compose.yml
+1. download file and put on same level with BE and FE code.
+2. run - docker-compose up
+
+
 Please see backend project here: https://github.com/azatugurlu/myretro-rest
 
