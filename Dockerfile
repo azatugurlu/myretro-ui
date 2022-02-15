@@ -1,24 +1,15 @@
-FROM node:lts-alpine
-
-# install simple http server for serving static content
-RUN npm install -g http-server
-
-# make the 'app' folder the current working directory
-WORKDIR /myretro-ui
-
-# copy both 'package.json' and 'package-lock.json' (if available)
-COPY package*.json ./
-
+# build stage
+FROM node:lts-alpine as build-stage
+WORKDIR /app
 RUN npm install -g npm@7.24.0
 RUN apk add --update python3 make g++ && rm -rf /var/cache/apk/*
-
-# install project dependencies
+COPY package*.json ./
 RUN npm install
-
-# copy project files and folders to the current working directory (i.e. 'app' folder)
 COPY . .
+RUN npm run build:prod
 
-RUN npm run dev
-
-EXPOSE 9528
-CMD [ "http-server", "dist" ]
+# production stage
+FROM nginx:stable-alpine as production-stage
+COPY --from=build-stage /app/dist /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
