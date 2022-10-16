@@ -3,7 +3,7 @@
     <el-form class="validate-form" auto-complete="on" label-position="left">
       <h3  class="title" >{{ message }}</h3>
       <br></br>
-      <h4 @click="backToLogin">{{ $t('login.backToLogin') }}</h4>
+      <h4 class="title" @click="backToLogin">{{ $t('login.backToLogin') }}</h4>
     </el-form>
   </div>
 </template>

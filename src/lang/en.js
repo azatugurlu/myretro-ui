@@ -70,7 +70,7 @@ export default {
 		lastname: 'Last Name',
 		code: 'Code',
 		validate: 'Validate',
-		backToLogin: 'Back to Login',
+		backToLogin: 'Click here for back to Login',
 		phone: 'Phone (e.g. +358409999999)',
 		registerSuccess: 'Registration success. Please check your email to veriy your account.',
 		closeWindow: 'You can close this window.',
